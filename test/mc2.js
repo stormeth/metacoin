@@ -1,6 +1,6 @@
 var MetaCoin = artifacts.require("./MetaCoin.sol");
 
-contract('Mc1', function(accounts) {
+contract('Mc2', function(accounts) {
 
   it("t1", function() {
     var meta;
