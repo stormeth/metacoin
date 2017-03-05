@@ -18,10 +18,15 @@ contract('Mc3', function(accounts) {
 
         return MetaCoin.deployed().then(function(instance) {
             meta = instance;
+
             return meta.sendCoin(ac2, amount);
         }).then(function() {
-            return meta.sendCoin(ac2, amount);
+
+            return meta.sendCoin(ac2, amount).then(function(tx) {
+                // console.log(tx);
+            })
         }).then(function() {
+
             return meta.sendCoin(ac3, amount);
         }).then(function() {
 
